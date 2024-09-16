@@ -18,7 +18,7 @@ import { ref } from 'vue';
 <style scoped>
 
 main{
-  width: 90%;
+  width: 50%;
   margin: auto;
   display: flex;
 }
