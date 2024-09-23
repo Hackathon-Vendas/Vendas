@@ -13,7 +13,7 @@
 <style scoped>
 header {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     margin: auto;
     background-color: #1a1818e8;
 }
