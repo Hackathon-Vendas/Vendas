@@ -3,15 +3,18 @@ import { ref } from 'vue';
 </script>
 
 <template>
-  <main>
-  </main>
+  <img src="/public/BannerBebidas.png" class="img">
 </template>
 
 <style scoped>
-main {
+
+main{
   width: 90%;
   margin: auto;
   display: flex;
 }
 
+img{
+width: 200px;
+}
 </style>

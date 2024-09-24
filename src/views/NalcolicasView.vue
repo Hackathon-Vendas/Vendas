@@ -4,6 +4,9 @@ import { ref } from 'vue';
 
 <template>
   <main>
+    <img src="public/BannerBebidas.png">
+    <div class="bebidas">
+    </div>
   </main>
 </template>
 
@@ -14,4 +17,7 @@ main {
   display: flex;
 }
 
+img {
+  width: 200px;
+}
 </style>
