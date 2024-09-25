@@ -6,8 +6,8 @@ import MenuVue from '@/components/others/MenuVue.vue'
 
 <template>
   <HeaderVue />
-  <RouterView />
   <MenuVue />
+  <RouterView />
   
 </template>
 

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import NalcolicasView from '../views/HomeView.vue'
-import AlcolicasView from '../views/HomeView.vue'
+import AlcolicasView from '../views/AlcolicasView.vue'
+import NalcolicasView from '../views/NalcolicasView.vue'
+
 
 
 
@@ -15,13 +16,13 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/',
-      name: 'Nalcolicas',
+      path: '/nalcolicas',
+      name: 'nalcolicas',
       component: NalcolicasView
     },
     {
-      path: '/',
-      name: 'Alcolicas',
+      path: '/alcolicas',
+      name: 'alcolicas',
       component: AlcolicasView
     },
     

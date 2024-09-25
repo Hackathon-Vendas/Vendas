@@ -8,10 +8,7 @@ import { ref } from 'vue';
 </template>
 
 <style scoped>
-main {
-  width: 90%;
-  margin: auto;
-  display: flex;
-}
+
+
 
 </style>
