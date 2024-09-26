@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import SobremesasView from '../views/SobremesasView.vue'
 import AlcolicasView from '../views/AlcolicasView.vue'
 import NalcolicasView from '../views/NalcolicasView.vue'
+import PrincipaisView from '../views/PrincipaisView.vue'
 import EntradasView from '../views/EntradasView.vue'
 
 const router = createRouter({
@@ -34,6 +35,12 @@ const router = createRouter({
       path: '/alcolicas',
       name: 'alcolicas',
       component: AlcolicasView
+    },
+
+    {
+      path: '/principais',
+      name: 'principais',
+      component: PrincipaisView
     },
   ]
 })
