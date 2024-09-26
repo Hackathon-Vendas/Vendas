@@ -45,6 +45,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-left: 27%;
+  margin-top: 8%;
 }
 
 .banner {

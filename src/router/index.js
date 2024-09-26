@@ -26,7 +26,8 @@ const router = createRouter({
       name: 'entradas',
       component: EntradasView
     },
-    ]
+    
+    {
       path: '/nalcolicas',
       name: 'nalcolicas',
       component: NalcolicasView
