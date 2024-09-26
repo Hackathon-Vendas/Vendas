@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AlcolicasView from '../views/AlcolicasView.vue'
+import NalcolicasView from '../views/NalcolicasView.vue'
+
+
+
 
 
 const router = createRouter({
@@ -10,8 +15,20 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+    {
+      path: '/nalcolicas',
+      name: 'nalcolicas',
+      component: NalcolicasView
+    },
+    {
+      path: '/alcolicas',
+      name: 'alcolicas',
+      component: AlcolicasView
+    },
     
   ]
 })
+
+
 
 export default router
