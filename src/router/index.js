@@ -2,10 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AlcolicasView from '../views/AlcolicasView.vue'
 import NalcolicasView from '../views/NalcolicasView.vue'
-
-
-
-
+import PrincipaisView from '../views/PrincipaisView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,7 +22,11 @@ const router = createRouter({
       name: 'alcolicas',
       component: AlcolicasView
     },
-    
+    {
+      path: '/principais',
+      name: 'principais',
+      component: PrincipaisView
+    },
   ]
 })
 
