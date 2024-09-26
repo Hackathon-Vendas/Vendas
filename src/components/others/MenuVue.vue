@@ -16,16 +16,17 @@ import { RouterLink } from 'vue-router';
     <li><img src="/public/logo-rodizio.svg"><a href="#">Rodízio</a></li>
     <li><img src="/public/logo-bebida.svg"><a href="#">Bebidas</a></li>
     <li><img src="/public/logo-sobremesa.svg"><a href="#">Sobremesas</a></li>
+    <li><img src="/public/logo-alacarte.svg"><RouterLink to="/entrada">À la carte</RouterLink></li>
+    <li><img src="/public/logo-rodizio.svg"><RouterLink to="/rodizio">Rodízio</RouterLink></li>
+    <li><img src="/public/logo-bebida.svg"><RouterLink to="/alcolicas">Bebidas</RouterLink></li>
+    <li><img src="/public/logo-sobremesa.svg"><RouterLink to="/nalcolicas">Sobremesas</RouterLink></li>
    </ul>
    </div>
   </main>
 </template>
 
 <style scoped>
-  
 main {
-=======
-main{
   width: 90%;
   margin: auto;
   display: flex;
@@ -59,3 +60,6 @@ main{
 }
 
 </style>
+
+</style>
+

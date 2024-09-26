@@ -9,6 +9,7 @@ import MenuVue from '@/components/others/MenuVue.vue'
   <HeaderVue />
   <MenuVue />
   <RouterView />
+  
 </template>
 
 <style scoped>
