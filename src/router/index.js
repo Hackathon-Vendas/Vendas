@@ -21,6 +21,11 @@ const router = createRouter({
     },
    
     {
+      path: '/entradas',
+      name: 'entradas',
+      component: EntradasView
+    },
+    ]
       path: '/nalcolicas',
       name: 'nalcolicas',
       component: NalcolicasView
@@ -30,12 +35,6 @@ const router = createRouter({
       name: 'alcolicas',
       component: AlcolicasView
     },
-        {
-      path: '/entradas',
-      name: 'entradas',
-      component: EntradasdasView
-    },
-    
   ]
 })
 

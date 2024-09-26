@@ -6,6 +6,8 @@ import { ref } from 'vue';
   <main>
 
   </main>
+
+   
 </template>
 
 <style scoped>
