@@ -1,11 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import SobremesasView from '../views/SobremesasView.vue'
 import AlcolicasView from '../views/AlcolicasView.vue'
 import NalcolicasView from '../views/NalcolicasView.vue'
-
-
-
-
+import EntradasView from '../views/EntradasView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +13,13 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+  
+    {
+      path: '/sobremesas',
+      name: 'sobremesas',
+      component: SobremesasView
+    },
+   
     {
       path: '/nalcolicas',
       name: 'nalcolicas',
@@ -25,10 +30,13 @@ const router = createRouter({
       name: 'alcolicas',
       component: AlcolicasView
     },
+        {
+      path: '/entradas',
+      name: 'entradas',
+      component: EntradasdasView
+    },
     
   ]
 })
-
-
 
 export default router
