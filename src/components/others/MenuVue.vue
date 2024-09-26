@@ -11,6 +11,7 @@ import { RouterLink } from 'vue-router';
     <li><img src="/public/logo-rodizio.svg"><RouterLink to="/rodizio">Rodízio</RouterLink></li>
     <li><img src="/public/logo-bebida.svg"><RouterLink to="/alcolicas">Bebidas</RouterLink></li>
     <li><img src="/public/logo-sobremesa.svg"><RouterLink to="/sobremesas">Sobremesas</RouterLink></li>
+    <li><img src="/public/logo-sobremesa.svg"><RouterLink to="/nalcolicas">Sobremesas</RouterLink></li>
    </ul>
    </div>
   </main>
