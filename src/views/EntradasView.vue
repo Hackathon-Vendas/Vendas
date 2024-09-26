@@ -1,35 +1,35 @@
 <script setup>
 import { ref } from 'vue'
-import aguasg from '../assets/aguasg.png';
-import aguacg from '../assets/aguacg.png';
-import refri from '../assets/refri.png';
-import sucos from '../assets/sucos.png';
+import Sunomono from '../assets/Sunomono.png';
+import Gyoza from '../assets/gyoza.png';
+import Tataki from '../assets/tatakiAtum.png';
 
-const drinks = ref([
-  { name: 'Àgua sem gás', unit: '(Unidade 1)', description: 'Água Mineral Sem Gás - 510ml', price: 'R$8,00', image: aguasg },
-  { name: 'Àgua com Gás', unit: '(Unidade 1)', description: 'Água Mineral Com Gás - 510ml', price: 'R$8,00', image: aguacg },
-  { name: 'Refri', unit: '(Unidade 1)', description: 'Refrigerantes diversos. 220ml', price: 'R$6,50', image: refri },
-  { name: 'Sucos', description: 'Sucos naturais de frutos. 250ml', price: 'R$11,00', image: sucos },
+
+const entries = ref([
+  { name: 'Sunomono', unit: '(1 unidade)', description: ' Salada refrescante de pepino agridoce com gergelim torrado.', price: 'R$22,50', image: Sunomono },
+  { name: 'Gyoza', unit: '(4 unidades)', description: 'Delicados pasteizinhos recheados com carne suína, servidos com molho especial.', price: 'R$33,50', image: Gyoza },
+  { name: 'Tataki de Atum', unit: '(8 unidades)', description: 'Finas fatias de atum levemente selado, servidas com molho cítrico ponzu.', price: 'R$45,90', image: Tataki },
 ])
 </script>
 
 <template>
   <main>
 
-    <img src="../assets/BannerBebidas.png" alt="Banner Bebidas" class="banner">
-    <h2>Bebidas</h2>
 
-    <div class="bebidas">
-      <div v-for="drink in drinks" :key="drink.name" class="drink-item">
-        <img :src="drink.image" :alt="drink.name" class="drink-image">
-        <div class="drink-details">
+    <img src="../assets/bannerEntradas.png" alt="Banner Entradas" class="banner">
+    <h2>Entradas</h2>
+
+    <div class="entries">
+      <div v-for="entries in entries" :key="entries.name" class="entries-item">
+        <img :src="entries.image" :alt="entries.name" class="entries-image">
+        <div class="entries-details">
           <div class="title">
-            <h3>{{ drink.name }}</h3>
-            <p class="unit">{{ drink.unit }}</p>
-            <p class="price">{{ drink.price }}</p>
+            <h3>{{ entries.name }}</h3>
+            <p class="unit">{{ entries.unit }}</p>
+            <p class="price">{{ entries.price }}</p>
           </div>
 
-          <p class="description">{{ drink.description }}</p>
+          <p class="description">{{ entries.description }}</p>
 
         </div>
       </div>
@@ -44,7 +44,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8%;
   margin-left: 27%;
 }
 
@@ -53,7 +52,7 @@ main {
   margin-bottom: 20px;
 }
 
-.bebidas {
+.entries{
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -62,7 +61,7 @@ main {
   width: 100%;
 }
 
-.drink-item {
+.entries-item {
   display: flex;
   align-items: center;
   border-radius: 14px;
@@ -73,14 +72,14 @@ main {
   margin-top: 3%;
 }
 
-.drink-image {
+.entries-image {
   width: 250px;
   height: 230px;
   border-radius: 18px;
   margin-top: 19px;
 }
 
-.drink-details h3 {
+.entries-details h3 {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 1000;
@@ -91,7 +90,7 @@ main {
   margin-bottom: 2%;
 }
 
-.drink-details .price {
+.entries-details .price {
   font-family: 'Inter', sans-serif, sans-serif;
   font-style: normal;
   font-weight: 1000;
@@ -104,7 +103,7 @@ main {
 
 }
 
-.drink-details .unit {
+.entries-details .unit {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 200;
@@ -115,7 +114,7 @@ main {
   margin-left: 10px;
 }
 
-.drink-details .description {
+.entries-details .description {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -126,7 +125,7 @@ main {
   margin-top: 5%;
 }
 
-.drink-details {
+.entries-details {
   height: 80%;
 }
 
