@@ -9,8 +9,8 @@ import { RouterLink } from 'vue-router';
    <ul>
     <li><img src="/public/logo-alacarte.svg"><RouterLink to="/entrada">À la carte</RouterLink></li>
     <li><img src="/public/logo-rodizio.svg"><RouterLink to="/rodizio">Rodízio</RouterLink></li>
-    <li><img src="/public/logo-bebida.svg"><RouterLink to="/nalcolicas">Bebidas</RouterLink></li>
-    <li><img src="/public/logo-sobremesa.svg"><RouterLink to="/sobremesas">Sobremesas</RouterLink></li>
+    <li><img src="/public/logo-bebida.svg"><RouterLink to="/alcolicas">Bebidas</RouterLink></li>
+    <li><img src="/public/logo-sobremesa.svg"><RouterLink to="/nalcolicas">Sobremesas</RouterLink></li>
    </ul>
    </div>
   </main>
@@ -28,7 +28,7 @@ main {
   height: 100vh;
   width: 200px;
   position: fixed;
-  top: 15%;
+  top: 19%;
   left: 0;
   background-color: #333;
   padding-top: 20px;
