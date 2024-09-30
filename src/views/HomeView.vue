@@ -4,10 +4,8 @@ import { ref } from 'vue';
 
 <template>
   <main>
-
-  </main>
-
    
+  </main>
 </template>
 
 <style scoped>

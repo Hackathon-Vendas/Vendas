@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
+defineProps(['title', 'descricao', 'imagem', 'price', 'valor']);
 </script>
 <template>
     <main>
