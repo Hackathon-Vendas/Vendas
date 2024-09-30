@@ -41,15 +41,6 @@ export default {
       </div>
     </div>
 
-
-    <div class="sidebar">
-      <ul>
-        <li><img class="logo" src="/public/logo-alacarte.svg"><a href="#">À la carte</a></li>
-        <li><img class="logo" src="/public/logo-rodizio.svg"><a href="#">Rodízio</a></li>
-        <li><img class="logo" src="/public/logo-bebida.svg"><a href="#">Bebidas</a></li>
-        <li><img class="logo" src="/public/logo-sobremesa.svg"><a href="#">Sobremesas</a></li>
-      </ul>
-    </div>
     <div class="img">
       <img class="imagem-1" src="/public/sushi.webp">
     </div>
@@ -70,11 +61,11 @@ export default {
       </div>
     </div>
   </main>
-
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 
 main {
   width: 90%;
@@ -160,38 +151,6 @@ main {
   background-color: #e63e3e;
 }
 
-
-
-.sidebar {
-  height: 88%;
-  width: 160px;
-  position: fixed;
-  top: 9, 5vh;
-  left: 0;
-  background-color: #333;
-  padding-top: 12px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 25px;
-  text-align: center;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  font-size: 15px;
-  padding-top: 10px;
-  font-family: "Roboto Mono", monospace;
-}
-
 .logo {
   height: 50px;
   width: 50px;
@@ -247,4 +206,5 @@ main {
   margin-top: 8px;
   font-weight: bold;
 }
+
 </style>

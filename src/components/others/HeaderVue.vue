@@ -19,6 +19,7 @@ header {
     padding: 7px;
     margin: auto;
     background-color: #1a1818e8;
+    position: fixed;
 }
 
 .container {
