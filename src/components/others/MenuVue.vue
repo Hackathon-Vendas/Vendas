@@ -1,34 +1,62 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
-</script>
 
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+</script>
 <template>
   <main>
-   <div class="sidebar">
-   <ul>
-    <li><img src="/public/logo-alacarte.svg"><RouterLink to="/entradas">Entadas</RouterLink></li>
-    <li><img src="/public/logo-alacarte.svg"><RouterLink to="/principais">Pratos Principais</RouterLink></li>
-    <li><img src="/public/logo-rodizio.svg"><RouterLink to="/nalcolicas">Não Alcóolicas</RouterLink></li>
-    <li><img src="/public/logo-bebida.svg"><RouterLink to="/alcolicas">Bebidas Alcóolicas</RouterLink></li>
-    <li><img src="/public/logo-sobremesa.svg"><RouterLink to="/sobremesas">Sobremesas</RouterLink></li>
-   </ul>
-   </div>
+    <div class="sidebar">
+      <ul>
+        <li><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img
+              src="/public/logo-alacarte.svg">Á la carte
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+            <li><RouterLink to="">Entadas</RouterLink></li>
+            <li><RouterLink to="/">Pratos Principais</RouterLink></li>
+          </ul>
+          </li>
+        <li><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img
+              src="/public/logo-rodizio.svg">Rodízio
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+            <li><RouterLink to="/entradas">Entadas</RouterLink></li>
+            <li><RouterLink to="/principais">Pratos Principais</RouterLink></li>
+          </ul>
+          </li>
+        <li><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img
+              src="/public/logo-bebida.svg">Bebidas
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><RouterLink to="/nalcolicas">Não alcóolicas</RouterLink></li>
+            <li><RouterLink to="/alcolicas">Alcóolicas</RouterLink></li>
+          </ul>
+        </li>
+        <li><button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img
+              src="/public/logo-alacarte.svg"><img src="/public/logo-sobremesa.svg">Sobremesas<span
+              class="caret"></span></button>
+        </li>
+      </ul>
+    </div>
   </main>
 </template>
 
 <style scoped>
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
+
 main {
   width: 90%;
   margin: auto;
   display: flex;
 }
+
 .sidebar {
   height: 100vh;
   width: 200px;
   position: absolute;
   top: 19%;
-  top: 9,5vh;
+  top: 9, 5vh;
   left: 0;
   background-color: #333;
   padding-top: 20px;
@@ -51,5 +79,7 @@ main {
   font-size: 18px;
 }
 
+.btn .btn-primary .dropdown-toggle{
+  background-color: #333;
+}
 </style>
-
