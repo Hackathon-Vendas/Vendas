@@ -17,6 +17,7 @@ header {
     margin: auto;
     background-color: #1a1818e8;
     position: fixed;
+    z-index: 10;
 }
 
 .container{

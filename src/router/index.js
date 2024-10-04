@@ -14,19 +14,17 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-  
     {
       path: '/sobremesas',
       name: 'sobremesas',
       component: SobremesasView
     },
-   
     {
       path: '/entradas',
       name: 'entradas',
       component: EntradasView
     },
-    ]
+    {
       path: '/nalcolicas',
       name: 'nalcolicas',
       component: NalcolicasView

@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
+defineProps(['titulo', 'title', 'descricao', 'imagem', 'quantia', 'valor']);
 </script>
 <template>
     <main>
@@ -22,14 +22,13 @@ defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
 .container {
     justify-content: space-around;
     color: white;
-    margin: 15% 15%;
     font-family: 'Inter';
     display: flex;
     background-color: #454545;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 8px;
     /* height: 20%; */
-    width: 80%;
+    min-width: 60rem;
 }
 
 #valor{
@@ -53,7 +52,7 @@ defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
 #desc {
     font-size: 20px;
     letter-spacing: 4.5px;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 img {
