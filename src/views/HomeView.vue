@@ -1,14 +1,16 @@
 <script>
 import { ref } from 'vue';
-
+import CarrosselContent from '@/components/others/carrossel/CarrosselContent.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper-bundle.css';
+// import CarrosselContent from '@/components/others/carrossel/CarrosselContent.vue';
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
-  },
+    CarrosselContent
+},
   data() {
     return {
       showWelcomeScreen: true,
@@ -41,9 +43,7 @@ export default {
       </div>
     </div>
 
-    <div class="img">
-      <img class="imagem-1" src="/public/sushi.webp">
-    </div>
+    <CarrosselContent />
 
     <div class="carousel-container">
 
