@@ -1,4 +1,7 @@
 <script setup>
+import PedidosVue from '@/components/PedidosVue.vue'
+import { ref } from 'vue';
+const showPedidos = ref(false);
 </script>
 
 <template>
@@ -8,8 +11,14 @@
             <img class="logo-secundaria" src="/public/logo-sushi.svg">
         </div>
         <div class="cart-icon">
-      <img src="/public/logo-carrinho.svg" alt="Carrinho de Compras" />
-    </div>
+            <div>
+                <button @click="showPedidos = !showPedidos"><img src="/public/logo-carrinho.svg" />
+                </button>
+                <div v-if="showPedidos">
+                    <PedidosVue />
+                </div>
+            </div>
+        </div>
     </header>
 </template>
 
@@ -43,14 +52,14 @@ header {
 }
 
 .cart-icon {
-  position: absolute;
-  top: 30px;
-  right: 25px;
+    position: absolute;
+    top: 30px;
+    right: 25px;
 }
 
 .cart-icon img {
-  width: 40px; 
-  height: auto;
-  cursor: pointer;
+    width: 40px;
+    height: auto;
+    cursor: pointer;
 }
 </style>

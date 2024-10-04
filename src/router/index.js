@@ -43,6 +43,8 @@ const router = createRouter({
       name: 'principais',
       component: PrincipaisView
     },
+
+    
   ]
 })
 
