@@ -46,8 +46,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8%;
   margin-left: 27%;
+  position: static;
+  margin-top: 1%;
 }
 
 .banner {
@@ -67,7 +68,7 @@ main {
 .drink-item {
   display: flex;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 8px;
   width: 100%;
   height: 200px;
   background-color: rgba(69, 69, 69, 1);
@@ -139,7 +140,7 @@ main {
 
 h2 {
   position: absolute;
-  top: 270px;
+  top: 42%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -149,4 +150,15 @@ h2 {
   letter-spacing: 0.25em;
   color: #FFFFFF;
 }
+
+/* Rectangle 61 
+
+position: absolute;
+width: 1243px;
+height: 902px;
+left: 197px;
+bottom: 0px;
+
+background: #1E1E1E;
+*/
 </style>

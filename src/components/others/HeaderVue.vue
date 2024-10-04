@@ -18,8 +18,10 @@ header {
     width: 100%;
     padding: 7px;
     margin: auto;
-    background-color: #1a1818e8;
-    position: fixed;
+    background-color: #1a1818;
+    position: static;
+    filter: drop-shadow(0px 10px 15px rgba(189, 188, 188, 0.438));
+    z-index: 100px;
 }
 
 .container {
@@ -53,4 +55,5 @@ header {
   height: auto;
   cursor: pointer;
 }
+
 </style>

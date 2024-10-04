@@ -44,13 +44,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8%;
   margin-left: 27%;
+  position: static;
+  margin-top: 1%;
 }
 
 .banner {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .bebidas {
@@ -65,7 +65,7 @@ main {
 .drink-item {
   display: flex;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 8px;
   width: 100%;
   height: 200px;
   background-color: rgba(69, 69, 69, 1);
@@ -136,8 +136,6 @@ main {
 }
 
 h2 {
-  position: absolute;
-  top: 270px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -146,5 +144,6 @@ h2 {
   text-align: center;
   letter-spacing: 0.25em;
   color: #FFFFFF;
+  margin-bottom: 3%;
 }
 </style>
