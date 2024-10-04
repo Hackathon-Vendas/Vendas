@@ -75,7 +75,7 @@ main {
 }
 
 .entries-image {
-  width: 250px;
+  width: 350px;
   height: 230px;
   border-radius: 18px;
   margin-top: 19px;

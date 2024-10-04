@@ -13,39 +13,39 @@ const showBebidas = ref(false);
       <ul>
         <li><button @click="showAlacarte = !showAlacarte"><img src="/public/logo-alacarte.svg">
             <p>Á la carte</p>
-          </button>
+          </button></li>
           <div v-if="showAlacarte">
             <ul>
               <li>
-                <RouterLink to="/entradas">Entadas</RouterLink>
+                <RouterLink to="/entradas">Entradas</RouterLink>
               </li>
               <li>
                 <RouterLink to="/principais">Pratos Principais</RouterLink>
               </li>
             </ul>
           </div>
-        </li>
+        
         <li><button @click="showRodizio = !showRodizio"><img src="/public/logo-rodizio.svg">
             <p>Rodízio</p>
-          </button>
+          </button></li>
           <div v-if="showRodizio">
             <ul>
               <li>
-                <RouterLink to="/">Entadas</RouterLink>
+                <RouterLink to="/">Entradas</RouterLink>
               </li>
               <li>
                 <RouterLink to="/">Pratos Principais</RouterLink>
               </li>
             </ul>
           </div>
-        </li>
+        
         <li><button @click="showBebidas = !showBebidas"><img src="/public/logo-bebida.svg">
             <p>Bebidas</p>
           </button></li>
         <div v-if="showBebidas">
           <ul>
             <li>
-              <RouterLink to="/nalcolicas">Não alcóolicas</RouterLink>
+              <RouterLink to="/nalcolicas" >Não alcóolicas</RouterLink>
             </li>
             <li>
               <RouterLink to="/alcolicas">Alcóolicas</RouterLink>
@@ -67,17 +67,16 @@ main {
   margin: auto;
   display: flex;
   position: static;
-}
+  }
 
 .sidebar {
   width: 200px;
-  top: 16%;
-  top: 9, 5vh;
+  /* top: 16%; */
+  top: 13.2vh;
   left: 0;
   background-color: rgba(40, 40, 40, 1);
-  padding-top: 20px;
   position: absolute;
-  z-index: 10;
+
 }
 
 .sidebar ul {
@@ -87,12 +86,13 @@ main {
 
 .sidebar ul li {
   padding: 15px;
-  text-align: center;
+  text-align: center;  
+  transition: 0.7s;
+
 }
 
-.sidebar ul li a {
+.sidebar ul li a{
   text-decoration: none;
-  color: white;
   display: block;
   top: 354px;
   font-family: 'Inter', normal, sans-serif;
@@ -102,15 +102,16 @@ main {
   text-align: center;
   letter-spacing: 0.25em;
   color: #FFFFFF;
-  filter: drop-shadow(-1px 6.5px 25px rgba(0, 0, 0, 0.44));
-  margin-top: 20px;
+  filter: drop-shadow(-1px 6.5px 25px rgba(0, 0, 0, 0.84));
+  width: 100%;
+  background-color: rgba(69, 69, 69, 1) ;
 }
 
-.sidebar button {
+  button {
   width: 100%;
   background-color: rgba(40, 40, 40, 1);
   border: #333;
-  transition: 0.3s ease;
+  transition: all 0.1s ease;
 }
 
  
@@ -125,16 +126,21 @@ button p {
   margin-top: 0.3%;
 }
 
-button :hover  {
-  background-color: rgba(156, 156, 156, 1);
-}
-
 img{
   margin-bottom: 20%;
 }
+/*
+:hover button {
+  background-color: rgba(94, 94, 94, 1);
 
+}
+*/
+.sidebar li:hover{
+    border-right: rgba(156, 156, 156, 1) 3px solid;
 
-/* Group 24 
+}
+/*
+Group 24 
 
 position: absolute;
 width: 195px;
@@ -152,6 +158,25 @@ left: 0px;
 top: 663px;
 
 filter: drop-shadow(-1px 6.5px 25px rgba(0, 0, 0, 0.44));
+
+/* Group 54 
+
+position: absolute;
+width: 195px;
+height: 195px;
+left: 0px;
+top: 120px;
+
+filter: drop-shadow(-1px 6.5px 25px rgba(0, 0, 0, 0.44));
+
+/* Group 72 
+
+position: absolute;
+width: 1071px;
+height: 225px;
+left: 280px;
+top: 134px;
+
 
 */
 </style>
