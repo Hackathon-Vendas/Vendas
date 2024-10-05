@@ -36,6 +36,10 @@ const showBebidas = ref(false);
               <li class="router">
                 <RouterLink to="/">Pratos Principais</RouterLink>
               </li>
+              <li class="router">
+                <RouterLink to="/">Sobremesas</RouterLink>
+
+              </li>
             </ul>
           </div>
         

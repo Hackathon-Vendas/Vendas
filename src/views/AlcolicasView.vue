@@ -140,7 +140,7 @@ main {
 
 h2 {
   position: absolute;
-  top: 42%;
+  top: 44%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;

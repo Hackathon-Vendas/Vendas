@@ -136,6 +136,8 @@ main {
 }
 
 h2 {
+  position: absolute;
+  top: 42%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -144,6 +146,5 @@ h2 {
   text-align: center;
   letter-spacing: 0.25em;
   color: #FFFFFF;
-  margin-bottom: 3%;
 }
 </style>
