@@ -8,7 +8,7 @@ const showBebidas = ref(false);
 
 </script>
 <template>
-  <main>
+  <aside>
     <div class="sidebar">
       <ul>
         <li><button @click="showAlacarte = !showAlacarte"><img src="/public/logo-alacarte.svg">
@@ -61,11 +61,11 @@ const showBebidas = ref(false);
         </li>
       </ul>
     </div>
-  </main>
+  </aside>
 </template>
 
 <style scoped>
-main {
+aside {
   width: 90%;
   height: 100%;
   margin: auto;
@@ -75,7 +75,7 @@ main {
 
 .sidebar {
   width: 200px;
-  top: 15.7 vh;
+  top: 15.7vh;
   left: 0;
   background-color: rgba(40, 40, 40, 1);
   position: absolute;

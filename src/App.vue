@@ -8,10 +8,14 @@ import MenuVue from '@/components/others/MenuVue.vue'
 <template>
   <HeaderVue />
   <MenuVue />
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
   
 </template>
 
 <style scoped>
-
+main {
+  margin-left: 100px;
+}
 </style>
