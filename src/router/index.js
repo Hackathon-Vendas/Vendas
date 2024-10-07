@@ -6,6 +6,7 @@ import NalcolicasView from '../views/NalcolicasView.vue'
 import PrincipaisView from '../views/PrincipaisView.vue'
 import EntradasView from '../views/EntradasView.vue'
 
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
