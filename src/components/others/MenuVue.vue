@@ -1,62 +1,100 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, computed, watch } from 'vue';
 import { RouterLink } from 'vue-router';
+import router from '@/router';
 
-const showAlacarte = ref(false);
-const showRodizio = ref(false);
-const showBebidas = ref(false);
 
+
+const alacarte = ref(false);
+
+function showAlacarte() {
+  rodizio.value = false
+  bebidas.value = false
+  alacarte.value = true
+}
+
+function showRodizio() {
+  rodizio.value = true
+  bebidas.value = false
+  alacarte.value = false
+}
+function showBebidas() {
+  rodizio.value = false
+  bebidas.value = true
+  alacarte.value = false
+}
+
+const rodizio = ref(false);
+const bebidas = ref(false);
+
+
+const teste2 = computed(() => router.currentRoute.value)
+const teste3 = ref("")
+
+onMounted(() => {
+  setTimeout(() => {
+    teste3.value = teste2.value.fullPath
+    console.log(teste3)
+  }, "1");
+})
+
+watch(router.currentRoute, () => {
+  teste3.value = teste2.value.fullPath
+})
 </script>
 <template>
   <aside>
     <div class="sidebar">
       <ul>
-        <li><button @click="showAlacarte = !showAlacarte"><img src="/public/logo-alacarte.svg">
+        <li><button @click="showAlacarte()" :class="{ 'selectedMenu': alacarte == true }"><img
+              src="/public/logo-alacarte.svg">
             <p>Á la carte</p>
           </button></li>
-          <div v-if="showAlacarte">
-            <ul>
-              <li class="router">
-                <RouterLink to="/entradas">Entradas</RouterLink>
-              </li>
-              <li class="router">
-                <RouterLink to="/principais">Pratos Principais</RouterLink>
-              </li>
-            </ul>
-          </div>
-        
-        <li><button @click="showRodizio = !showRodizio"><img src="/public/logo-rodizio.svg">
+        <div v-if="alacarte">
+          <ul>
+            <li class="router" :class="[{ 'selectedMenu': (teste3 == '/entradas') }]">
+              <RouterLink to="/entradas">Entradas</RouterLink>
+            </li>
+            <li class="router" :class="{ 'selectedMenu': (teste3 == '/principais') }">
+              <RouterLink to="/principais">Pratos Principais</RouterLink>
+            </li>
+          </ul>
+        </div>
+
+        <li><button @click="showRodizio()" :class="{ 'selectedMenu': rodizio == true }"><img
+              src="/public/logo-rodizio.svg">
             <p>Rodízio</p>
           </button></li>
-          <div v-if="showRodizio">
-            <ul>
-              <li class="router">
-                <RouterLink to="/">Entradas</RouterLink>
-              </li >
-              <li class="router">
-                <RouterLink to="/">Pratos Principais</RouterLink>
-              </li>
-              <li class="router">
-                <RouterLink to="/">Sobremesas</RouterLink>
+        <div v-if="rodizio">
+          <ul>
+            <li class="router" :class="{ 'selectedMenu': (teste3 == '/') }">
+              <RouterLink to="/">Entradas</RouterLink>
+            </li>
+            <li class="router" :class="{ 'selectedMenu': (teste3 == '/2') }">
+              <RouterLink to="/">Pratos Principais</RouterLink>
+            </li>
+            <li class="router" :class="{ 'selectedMenu': (teste3 == '/1') }">
+              <RouterLink to="/">Sobremesas</RouterLink>
 
-              </li>
-            </ul>
-          </div>
-        
-        <li><button @click="showBebidas = !showBebidas"><img src="/public/logo-bebida.svg">
+            </li>
+          </ul>
+        </div>
+
+        <li><button @click="showBebidas()" :class="{ 'selectedMenu': bebidas == true }"><img
+              src="/public/logo-bebida.svg">
             <p>Bebidas</p>
           </button></li>
-        <div v-if="showBebidas">
+        <div v-if="bebidas">
           <ul>
-            <li class="router">
-              <RouterLink to="/nalcolicas" >Não alcóolicas</RouterLink>
+            <li class="router" :class="{ 'selectedMenu': (teste3 == '/nalcolicas') }">
+              <RouterLink to="/nalcolicas">Não alcóolicas</RouterLink>
             </li>
-            <li class="router">
+            <li class="router" :class="{ 'selectedMenu': (teste3 == '/alcolicas') }">
               <RouterLink to="/alcolicas">Alcóolicas</RouterLink>
             </li>
           </ul>
         </div>
-        <li>
+        <li :class="{ 'selectedMenu': (teste3 = '/sobremesas') }">
           <RouterLink to="/sobremesas"><img src="/public/logo-sobremesa.svg">Sobremesas</RouterLink>
         </li>
       </ul>
@@ -71,7 +109,7 @@ aside {
   margin: auto;
   display: flex;
   position: static;
-  }
+}
 
 .sidebar {
   width: 200px;
@@ -85,15 +123,15 @@ aside {
 .sidebar ul {
   list-style-type: none;
   padding: 0;
-  transition: 0.7s;
+  transition: 0.3s;
 }
 
 .sidebar ul li {
-  text-align: center;  
+  text-align: center;
   height: 100%;
 }
 
-.sidebar ul li a{
+.sidebar ul li a {
   text-decoration: none;
   display: block;
   top: 354px;
@@ -108,14 +146,14 @@ aside {
   padding: 25px;
 }
 
-  button {
+button {
   width: 100%;
   background-color: rgba(40, 40, 40, 1);
-  border: rgba(40, 40, 40, 1);
-  transition: 0.7s;
+  border: none;
+  transition: 0.3s;
 }
 
- 
+
 button p {
   font-family: 'Inter', normal, sans-serif;
   font-weight: 900;
@@ -128,22 +166,27 @@ button p {
   margin-bottom: 20%;
 }
 
-img{
+img {
   margin-bottom: 20%;
   margin-top: 20%;
 }
-li button:hover{
+
+li button:hover {
   background-color: rgba(94, 94, 94, 1);
 }
 
-li:hover{
+li:hover {
   margin: 0;
   background-color: rgba(94, 94, 94, 1);
 }
 
-.sidebar li:hover{
-    border-right: rgba(156, 156, 156, 1) 3px solid;
+.selectedMenu {
+  margin: 0;
+  background-color: rgba(94, 94, 94, 1);
+  border-right: rgba(156, 156, 156, 1) 3px solid;
 }
+
+
 
 .router {
   width: 100%;
@@ -159,8 +202,7 @@ li:hover{
   letter-spacing: 0.25em;
   color: #FFFFFF;
   filter: drop-shadow(-1px 6.5px 25px rgba(0, 0, 0, 0.84));
-  background-color: rgba(69, 69, 69, 1) ;
+  background-color: rgba(69, 69, 69, 1);
   padding: 20px;
 }
-
 </style>
