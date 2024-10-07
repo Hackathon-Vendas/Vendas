@@ -41,6 +41,11 @@ header {
   position: absolute;
   top: 30px;
   right: 25px;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    background-color: #1a1818e8;
+    position: fixed;
 }
 
 .cart-icon img {

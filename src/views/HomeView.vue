@@ -4,19 +4,11 @@ import { ref } from 'vue';
 
 <template>
   <main>
-   <div class="sidebar">
-   <ul>
-    <li><img src="/public/logo-alacarte.svg"><a href="#">À la carte</a></li>
-    <li><img src="/public/logo-rodizio.svg"><a href="#">Rodízio</a></li>
-    <li><img src="/public/logo-bebida.svg"><a href="#">Bebidas</a></li>
-    <li><img src="/public/logo-sobremesa.svg"><a href="#">Sobremesas</a></li>
-   </ul>
-   </div>
+   
   </main>
 </template>
 
 <style scoped>
-
 main{
   width: 50%;
   margin: auto;
