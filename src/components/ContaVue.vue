@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <div class="container">
+    <div class="pagConta">
         <div class="conta">
             <div v-for="conta in contas" :key="conta.id">
                 <p>{{ conta.unidade }}, {{ conta.produto }}, {{ conta.valor }}</p>
@@ -28,11 +28,12 @@
 </template>
 
 <style scoped>
-.container {
+.pagConta    {
     position: absolute;
-    width: 400px;
-    height: 500%;
+    width: 40%;
+    height: 80%;
     top: 186px;
     background-color: blue;
+    border-radius: 8px;
 }
 </style>

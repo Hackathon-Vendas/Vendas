@@ -33,8 +33,6 @@ header {
 .container {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: auto;
   justify-content: center;
   align-items: center;
 }
