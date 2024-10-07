@@ -9,16 +9,16 @@ const showPedidos = ref(false);
         <div class="container">
             <img class="logo-principal" src="/public/logoH.png">
             <img class="logo-secundaria" src="/public/logo-sushi.svg">
-        </div>
         <div class="cart-icon">
             <div>
                 <button @click="showPedidos = !showPedidos"><img src="/public/logo-carrinho.svg" />
                 </button>
-                <div v-if="showPedidos">
-                    <PedidosVue />
-                </div>
             </div>
         </div>
+        <div v-if="showPedidos">
+            <PedidosVue />
+        </div>
+    </div>
     </header>
 </template>
 

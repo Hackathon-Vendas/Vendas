@@ -5,7 +5,7 @@ const produtos = useProdutoStore();
 </script>
 
 <template>
-   <div class="container">
+   <div class="sidebar-container">
     <div class="pedido">
         <div v-for="item in produtos.products" :key="item.id">
             <ItemPedido :id="item.id" :quantidade="item.id" :nome="item.nome" :preco="item.price" />
@@ -15,11 +15,12 @@ const produtos = useProdutoStore();
 </template>
 
 <style scoped>
-.container{
+.sidebar-container{
+    background-color: white;
     position: absolute;
     height: 100%;
     width: 50%;
-    }
+    } 
 *{
     color: white;
 }
