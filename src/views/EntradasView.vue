@@ -45,6 +45,8 @@ main {
   flex-direction: column;
   align-items: center;
   margin-left: 27%;
+  position: static;
+  margin-top: 1%;
 }
 
 .banner {
@@ -64,7 +66,7 @@ main {
 .entries-item {
   display: flex;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 8px;
   width: 100%;
   height: 200px;
   background-color: rgba(69, 69, 69, 1);
@@ -73,7 +75,7 @@ main {
 }
 
 .entries-image {
-  width: 250px;
+  width: 350px;
   height: 230px;
   border-radius: 18px;
   margin-top: 19px;
@@ -136,7 +138,7 @@ main {
 
 h2 {
   position: absolute;
-  top: 270px;
+  top: 42%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
