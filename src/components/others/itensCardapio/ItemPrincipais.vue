@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
+defineProps(['titulo', 'title', 'descricao', 'imagem', 'quantia', 'valor']);
 </script>
 <template>
     <main>
@@ -8,12 +8,12 @@ defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
             <div class="textos">
                 <div class="titulo">
                     <div>
-                        <h2>{{ title }}</h2>
-                        <p>{{ quantia }}</p>
+                        <h2 id="title">{{ title }}</h2>
+                        <p id="quantia">{{ quantia }}</p>
                     </div>
-                    <p>{{ valor }}</p>
+                    <p id="valor">{{ valor }}</p>
                 </div>
-                <p class="desc">{{ descricao }}</p>
+                <p id="desc">{{ descricao }}</p>
             </div>
         </div>
     </main>
@@ -22,18 +22,41 @@ defineProps(['title', 'descricao', 'imagem', 'quantia', 'valor']);
 .container {
     justify-content: space-around;
     color: white;
-    margin: 15% 15%;
     font-family: 'Inter';
     display: flex;
     background-color: #454545;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 8px;
-    height: 50%;
-    width: 50%;
+    /* height: 20%; */
+    min-width: 60rem;
+}
+
+#valor{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 5px
+}
+
+#title{
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px
+}
+
+#quantia {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 5.3px;
+}
+
+#desc {
+    font-size: 20px;
+    letter-spacing: 4.5px;
+    margin: 2rem 0;
 }
 
 img {
-    width: 30%;
+    width: 40%;
     filter: brightness(0.6);
 }
 
@@ -53,8 +76,4 @@ img {
     align-items: center;
 }
 
-.desc {
-    width: 100%;
-    margin: 1rem 0;
-}
 </style>
