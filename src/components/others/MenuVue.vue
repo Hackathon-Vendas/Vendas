@@ -1,62 +1,80 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import { useRoute } from 'vue-router';
 
-const showAlacarte = ref(false);
-const showRodizio = ref(false);
-const showBebidas = ref(false);
+const url = useRoute();
+const alacarte = ref(false);
+function showAlacarte() {
+  rodizio.value = false
+  bebidas.value = false
+  alacarte.value = true
+}
+// const url = this.$route.path
+function showRodizio() {
+  rodizio.value = true
+  bebidas.value = false
+  alacarte.value = false
+}
+function showBebidas() {
+  rodizio.value = false
+  bebidas.value = true
+  alacarte.value = false
+}
+const rodizio = ref(false);
+const bebidas = ref(false);
 
 </script>
 <template>
   <main>
     <div class="sidebar">
       <ul>
-        <li><button @click="showAlacarte = !showAlacarte"><img src="/public/logo-alacarte.svg">
+        <li><button @click="showAlacarte()" :class="{'selectedMenu' : alacarte == true}"><img src="/public/logo-alacarte.svg">
             <p>Á la carte</p>
           </button></li>
-          <div v-if="showAlacarte">
+          <div v-if="alacarte">
             <ul>
-              <li class="router">
+              <li class="router" :class="{'selectedMenu' : (url = '/entradas')}">
                 <RouterLink to="/entradas">Entradas</RouterLink>
               </li>
-              <li class="router">
+              <li class="router" :class="{'selectedMenu' : (url = '/principais')}">
                 <RouterLink to="/principais">Pratos Principais</RouterLink>
               </li>
             </ul>
           </div>
         
-        <li><button @click="showRodizio = !showRodizio"><img src="/public/logo-rodizio.svg">
+        <li><button @click="showRodizio()" :class="{'selectedMenu' : rodizio == true}"><img src="/public/logo-rodizio.svg">
             <p>Rodízio</p>
           </button></li>
-          <div v-if="showRodizio">
+          <div v-if="rodizio">
             <ul>
-              <li class="router">
+              <li class="router" :class="{'selectedMenu' : (url = '/')}">
                 <RouterLink to="/">Entradas</RouterLink>
               </li >
-              <li class="router">
+              <li class="router" :class="{'selectedMenu' : (url = '/')}">
                 <RouterLink to="/">Pratos Principais</RouterLink>
               </li>
-              <li class="router">
+              <li :class="{'selectedMenu' : (url = '/')}">
                 <RouterLink to="/">Sobremesas</RouterLink>
 
               </li>
             </ul>
           </div>
         
-        <li><button @click="showBebidas = !showBebidas"><img src="/public/logo-bebida.svg">
+        <li><button @click="showBebidas()" :class="{'selectedMenu' : bebidas == true}"><img src="/public/logo-bebida.svg">
             <p>Bebidas</p>
           </button></li>
-        <div v-if="showBebidas">
+        <div v-if="bebidas">
           <ul>
-            <li class="router">
+            <li class="router" :class="{'selectedMenu' : (url = '/nalcolicas')}">
               <RouterLink to="/nalcolicas" >Não alcóolicas</RouterLink>
             </li>
-            <li class="router">
+            <li class="router" :class="{'selectedMenu' : (url = '/alcolicas')}">
               <RouterLink to="/alcolicas">Alcóolicas</RouterLink>
             </li>
           </ul>
         </div>
-        <li>
+        <li :class="{'selectedMenu' : (url = '/sobremesas')}">
           <RouterLink to="/sobremesas"><img src="/public/logo-sobremesa.svg">Sobremesas</RouterLink>
         </li>
       </ul>
@@ -85,7 +103,7 @@ main {
 .sidebar ul {
   list-style-type: none;
   padding: 0;
-  transition: 0.7s;
+  transition: 0.3s;
 }
 
 .sidebar ul li {
@@ -112,7 +130,7 @@ main {
   width: 100%;
   background-color: rgba(40, 40, 40, 1);
   border: rgba(40, 40, 40, 1);
-  transition: 0.7s;
+  transition: 0.3s;
 }
 
  
@@ -140,10 +158,12 @@ li:hover{
   margin: 0;
   background-color: rgba(94, 94, 94, 1);
 }
-
-.sidebar li:hover{
-    border-right: rgba(156, 156, 156, 1) 3px solid;
+.selectedMenu{
+  margin: 0;
+  background-color: rgba(94, 94, 94, 1);
+  border-right: rgba(156, 156, 156, 1) 3px solid;
 }
+
 
 .router {
   width: 100%;
