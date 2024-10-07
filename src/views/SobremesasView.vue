@@ -24,7 +24,7 @@ const desserts = ref([
     <img src="../assets/bannerSobremesas.png" alt="Banner Sobremesas" class="banner">
     <h2>Sobremesas</h2>
 
-    <div class="bebidas">
+    <div class="desserts">
       <div v-for="desserts in desserts" :key="desserts.name" class="desserts-item">
         <img :src="desserts.image" :alt="desserts.name" class="desserts-image">
         <div class="desserts-details">
@@ -49,8 +49,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8%;
   margin-left: 27%;
+  position: static;
+  margin-top: 1%;
 }
 
 .banner {
@@ -58,7 +59,7 @@ main {
   margin-bottom: 20px;
 }
 
-.bebidas {
+.sobremesas {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -70,7 +71,7 @@ main {
 .desserts-item {
   display: flex;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 8px;
   width: 100%;
   height: 200px;
   background-color: rgba(69, 69, 69, 1);
@@ -79,7 +80,7 @@ main {
 }
 
 .desserts-image {
-  width: 250px;
+  width: 350px;
   height: 230px;
   border-radius: 18px;
   margin-top: 19px;
@@ -142,7 +143,7 @@ main {
 
 h2 {
   position: absolute;
-  top: 270px;
+  top: 42%;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
